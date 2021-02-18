@@ -28,5 +28,5 @@
     - role: configure_gslb
       gslb_leader: "{{ avi_controller }}"
       env: "aws"
-      ctrl: "{{ avi_controller }}"
+      ctrl: "{{ avi_controller  }}"
       tenant_name: "{{ Tenant }}"
