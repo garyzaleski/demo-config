@@ -14,19 +14,19 @@
   roles:
     - role: avinetworks.avisdk
     - role: create_tenant
-      ctrl: "{{ avi_controller }}"
+      ctrl: "{{ avi_controller_demo }}"
       tenant_name: "{{ Tenant }}"
     - role: configure_virtual
       loc: "dallas"
       env: "aws"
-      ctrl: "{{ avi_controller }}"
+      ctrl: "{{ avi_controller_demo }}"
       tenant_name: "{{ Tenant }}"
     - role: generate_certificate
-      ctrl: "{{ avi_controller }}"
+      ctrl: "{{ avi_controller_demo }}"
       tenant_name: "{{ Tenant }}"
       when: GenerateCertificate is defined
     - role: configure_gslb
-      gslb_leader: "{{ avi_controller }}"
+      gslb_leader: "{{ avi_controller_demo }}"
       env: "aws"
-      ctrl: "{{ avi_controller  }}"
+      ctrl: "{{ avi_controller_demo  }}"
       tenant_name: "{{ Tenant }}"
